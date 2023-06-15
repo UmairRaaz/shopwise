@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
-
+import MainApp from './components/MainApp';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import CartContext from './components/CartContext';
 function App() {
+  const [cartItems, setCartItems] = useState([])
+  const [wishListItems, setWishListItems] = useState([])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CartContext.Provider value={{ cartItems, setCartItems, wishListItems, setWishListItems }}>
+        <MainApp />
+      </CartContext.Provider>
     </div>
   );
 }
