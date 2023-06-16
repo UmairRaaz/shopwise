@@ -1,13 +1,28 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import CartContext from './CartContext';
 import image from '../products/f5.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 import Button from 'react-bootstrap/Button';
+import { Navigate, useNavigate } from 'react-router';
 const CartPage = () => {
   const { cartItems, setCartItems, wishListItems, setWishListItems } = useContext(CartContext);
   const [totalitem, setItem] = useState({})
+  const [totalPrice, setTotalPrice] = useState(0)
+  let navigate = useNavigate()
+  useEffect(() => {
+    let totalPrice = 0;
+    cartItems.forEach((item) => {
+      const quantity = totalitem[item.id] || 1;
+      const price = parseFloat(item.discPrice);
+      totalPrice += quantity * price;
+    });
+    setTotalPrice(totalPrice);
+  }, [cartItems, totalitem]);
+
+
+
   const addToWish = (data) => {
     const updateWishItems = [...wishListItems, data];
     setWishListItems(updateWishItems);
@@ -39,10 +54,9 @@ const CartPage = () => {
       }
     });
   };
-  console.log(totalitem)
   return (
     <div>
-      <div className='cartMain'>
+      <div className='main'>
         <div className="heading">
           <h3>Bag</h3>
         </div>
@@ -102,7 +116,10 @@ const CartPage = () => {
                 <div className='break'></div>
                 <div className="total">
                   <h4>Total</h4>
-                  <p>price</p>
+                  <p>{totalPrice}</p>
+                </div>
+                <div className="checkout-Btn">
+                  <Button variant="dark" onClick={()=> navigate('/Checkout')}>Proceed to Checkout</Button>
                 </div>
               </div>
             </div>

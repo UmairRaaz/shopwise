@@ -7,6 +7,7 @@ import ViewProduct from './ViewProduct';
 import Home from './Home';
 import CartPage from './CartPage';
 import WishList from './WishList';
+import Checkout from './Checkout';
 
 const MainApp = () => {
   return (
@@ -20,6 +21,7 @@ const MainApp = () => {
           <Route path='/Home' element={<Home />}></Route>
           <Route path='/CartPage' element={<CartPage />}></Route>
           <Route path='/WishList' element={<WishList />}></Route>
+          <Route path='/Checkout' element={<Checkout />}></Route>
         </Routes>
       </Router>
     </>

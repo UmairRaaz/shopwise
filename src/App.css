@@ -50,7 +50,7 @@
 
 
 /* Designing Cart Page  */
-.cartMain{
+.main{
     width: 100%;
     min-height: 91vh;
     background-color:#fbfaf7;
@@ -142,4 +142,38 @@
     height: 1px;
     background-color: #e2e4e6 ;
 }
+.checkout-Btn{
+    margin-top: 20px;
+}
 /* Designing Cart Page  */
+
+/* Designing Checkout Page  */
+.checkout-box{
+    width: 100%;
+    min-height: 80vh;
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+.colom1, .colom2{
+    border: 2px solid black;
+    flex-basis: 45%;
+    height: auto;
+}
+.colom1{
+    padding: 30px;
+}
+.colom1 h3{
+    margin-left: 20px;
+}
+.form{
+    margin-left: 20px;
+    width: 90%;
+}
+.form .btns{
+    margin: 0 5px;
+}
+/* .radioInput{
+    height: 50px;
+} */
+/* Designing Checkout Page  */
