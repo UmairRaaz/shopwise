@@ -151,16 +151,17 @@
 .checkout-box{
     width: 100%;
     min-height: 80vh;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     justify-content: space-between;
 }
 .colom1, .colom2{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     flex-basis: 45%;
     height: auto;
+    background-color: #fefefd;
 }
-.colom1{
+.colom1, .colom2{
     padding: 30px;
 }
 .colom1 h3{
@@ -173,7 +174,51 @@
 .form .btns{
     margin: 0 5px;
 }
-/* .radioInput{
-    height: 50px;
-} */
+.colom2 .products{
+    margin-top: 20px;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.colom2 .products .product{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+    padding: 5px;
+}
+.colom2 .products .product .name-price{
+    padding: 10px;
+    flex-basis: 50%;
+    height: 100%;
+}
+.colom2 .products .product .name-price .prices{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.colom2 .products .product .img{
+    flex-basis: 20%;
+    height: 100%;
+    border-radius: 5px;
+}
+.colom2 .products .product .img img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.colom2 .finalBill{
+    width: 100%;
+    margin: 10px 0;
+}
+.colom2 .finalBill .bills{
+    display: flex;
+    justify-content: space-between;
+}
+.colom2 .finalBill .bills .total{
+    margin-top: 10px;
+}
 /* Designing Checkout Page  */

@@ -7,8 +7,8 @@ import { faPlus, faMinus, faHeart } from '@fortawesome/free-solid-svg-icons';
 import Button from 'react-bootstrap/Button';
 import { Navigate, useNavigate } from 'react-router';
 const CartPage = () => {
-  const { cartItems, setCartItems, wishListItems, setWishListItems } = useContext(CartContext);
-  const [totalitem, setItem] = useState({})
+  const { cartItems, setCartItems, wishListItems, setWishListItems, totalitem, setItem } = useContext(CartContext);
+  // const [totalitem, setItem] = useState({})
   const [totalPrice, setTotalPrice] = useState(0)
   let navigate = useNavigate()
   useEffect(() => {
@@ -55,6 +55,7 @@ const CartPage = () => {
     });
   };
   return (
+    <>
     <div>
       <div className='main'>
         <div className="heading">
@@ -127,6 +128,7 @@ const CartPage = () => {
         </div>
       </div>
     </div>
+    </>
   );
 
 }

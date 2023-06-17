@@ -6,9 +6,10 @@ import CartContext from './components/CartContext';
 function App() {
   const [cartItems, setCartItems] = useState([])
   const [wishListItems, setWishListItems] = useState([])
+  const [totalitem, setItem] = useState({})
   return (
     <div className="App">
-      <CartContext.Provider value={{ cartItems, setCartItems, wishListItems, setWishListItems }}>
+      <CartContext.Provider value={{ cartItems, setCartItems, wishListItems, setWishListItems, totalitem, setItem }}>
         <MainApp />
       </CartContext.Provider>
     </div>
