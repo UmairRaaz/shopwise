@@ -8,6 +8,7 @@ import Home from './Home';
 import CartPage from './CartPage';
 import WishList from './WishList';
 import Checkout from './Checkout';
+import Filter from './Filter';
 
 const MainApp = () => {
   return (
@@ -22,6 +23,7 @@ const MainApp = () => {
           <Route path='/CartPage' element={<CartPage />}></Route>
           <Route path='/WishList' element={<WishList />}></Route>
           <Route path='/Checkout' element={<Checkout />}></Route>
+          <Route path='/Filter' element={<Filter />}></Route>
         </Routes>
       </Router>
     </>

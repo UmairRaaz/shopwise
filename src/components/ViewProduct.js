@@ -19,6 +19,7 @@ const ViewProduct = () => {
     }, [])
 
     const customerProduct = product.filter((x) => x.id === customerId)
+    // console.log(customerProduct)
     const { cartItems, setCartItems, wishListItems, setWishListItems } = useContext(CartContext);
     const addToCart = (data) => {
         const updateCartItems = [...cartItems, data];
@@ -48,9 +49,23 @@ const ViewProduct = () => {
                             </div>
                             <div className="details">
                                 <h2>{data.name}</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, doloremque?</p>
-                                <h4>Price: {data.discPrice}</h4>
-                                <div className="d-flex justify-content-between">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, doloremque Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, illum.</p>
+                                <div className="ratings">
+                                    {Array.from({ length: 5 }).map((_, index) => (
+                                        <FontAwesomeIcon key={index} icon={faStar} style={{ color: 'yellow', marginRight: "3px" }} />
+                                    ))}
+                                    <span style={{ marginLeft: "5px" }}>({data.rating})</span>
+                                </div>
+                                <div className="d-flex align-items-center mt-2">
+                                    <h4>Price: {data.discPrice}</h4>
+                                    <h6 style={{textDecoration : 'line-through', marginTop: '2px', marginLeft: '10px'}}>{data.price}</h6>
+                                </div>
+                                <div className="aboutProduct">
+                                    <h6>About Product</h6>
+                                    <span>Category : {data.category}</span> <br />
+                                    <span>Gender : {data.gender}</span>
+                                </div>
+                                <div className="d-flex gap-3 mt-3">
                                     {isInCart ? (
                                         <Button variant='secondary' onClick={() => goToBag(data.id)}>Go to Bag</Button>
                                     ) : (
