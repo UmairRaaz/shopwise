@@ -17,9 +17,7 @@ const ViewProduct = () => {
             .then((data) => setProduct(data.products))
             .catch(err => console.log(err))
     }, [])
-
     const customerProduct = product.filter((x) => x.id === customerId)
-    // console.log(customerProduct)
     const { cartItems, setCartItems, wishListItems, setWishListItems } = useContext(CartContext);
     const addToCart = (data) => {
         const updateCartItems = [...cartItems, data];

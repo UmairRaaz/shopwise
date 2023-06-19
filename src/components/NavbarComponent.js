@@ -9,7 +9,6 @@ import CartContext from './CartContext';
 
 const NavbarComponent = () => {
     const {cartItems, wishListItems} = useContext(CartContext)
-    console.log(wishListItems)
     return (
         <div>
                 <Navbar bg="light" expand="lg">

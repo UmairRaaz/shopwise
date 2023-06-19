@@ -302,3 +302,68 @@
 .heading-filter {
     margin: 20px 0;
 }
+
+/* Designing HomePage  */
+.hero-section{
+    width: 100%;
+    height: 60vh;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+.heading, .picture{
+    padding: 40px 30px;
+}
+.heading{
+    flex-basis: 40%;
+}
+.heading .btns{
+    margin: 5px ;
+}
+.heading h1{
+    font-size: 70px;
+}
+
+.picture{
+    flex-basis: 40%;
+    padding: 30px;
+}
+.picture img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.trending{
+    width: 100%;
+    height: 70vh;
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.text{
+    padding: 10px;
+    font-size: 45px;
+}
+.text ,.products{
+    flex-basis: 25%;
+    height: 50%;
+    border-radius: 30px;
+}
+.products .name-price{
+    width: 100%;
+    height: 20%;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+.products .image{
+    height: 80%;
+}
+.name-price .image img{
+    height: 100%;
+}
+/* Designing HomePage  */

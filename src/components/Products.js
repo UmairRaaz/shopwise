@@ -18,8 +18,7 @@ const Products = () => {
     const [sortByPrice, setSortByPrice] = useState(false);
     const [sortOption, setSortOption] = useState('mix');
     const [sortedProducts, setSortedProducts] = useState([...product]);
-
-
+    
     const navigate = useNavigate();
     useEffect(() => {
         fetch('/api/products')
@@ -27,7 +26,6 @@ const Products = () => {
             .then((data) => setProduct(data.products))
             .catch(err => console.log(err))
     }, [])
-
     const viewProduct = (id) => {
         navigate(`/ViewProduct/${id}`);
     }
@@ -66,8 +64,8 @@ const Products = () => {
         setSortOption(option); // Update the selected sort option
     };
     useEffect(() => {
-        handleSortByOption(sortOption);
-      }, []);
+        setSortedProducts(product);
+      }, [product]);
     // Applying Filters 
     const filteredAndSortedProducts = sortedProducts.filter((product) => {
         if (sortByPrice) { }

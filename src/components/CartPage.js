@@ -41,17 +41,16 @@ const CartPage = () => {
       [id]: (prevItems[id] || 1) + 1
     }));
   }
-
   const minusItem = (id) => {
     setItem((prevItems) => {
       const updatedValue = (prevItems[id] || 1) - 1;
       if (updatedValue === 0) {
         removeFromCart(id);
-        return {
-          ...prevItems,
-          [id]: updatedValue
-        };
       }
+      return {
+        ...prevItems,
+        [id]: updatedValue
+      };
     });
   };
   return (
@@ -64,6 +63,7 @@ const CartPage = () => {
         <div className="bag-price">
           <div className="bagItems-column">
             {cartItems.map((data) => {
+              console.log(totalitem[data.id])
               const isInWishlist = wishListItems.some((item) => item.id === data.id);
               return (
                 <div className="bagItems" key={data.id}>

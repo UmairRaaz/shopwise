@@ -14,7 +14,7 @@ const imagePaths = [
 const ratings = [];
 
 for (let i = 0; i < 10; i++) {
-  const rating = Math.floor(Math.random() * 5) + 1; 
+  const rating = Math.floor(Math.random() * 4) + 1; 
   const decimal = Math.floor(Math.random() * 9) + 1;
   const ratingWithDecimal = parseFloat(`${rating}.${decimal}`);
   ratings.push(ratingWithDecimal);
