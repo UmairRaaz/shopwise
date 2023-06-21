@@ -1,4 +1,9 @@
 /* Designing ViewProduct Page  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .box {
     width: 100%;
@@ -266,9 +271,9 @@
     /* background-color: hsla(0,0%,100%,.3); */
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    background: hsla(0,0%,100%,.3);
-    border: 1px solid hsla(0,0%,100%,.3);
-    box-shadow: 0 4px 30px rgba(0,0,0,.1);
+    background: hsla(0, 0%, 100%, .3);
+    border: 1px solid hsla(0, 0%, 100%, .3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, .1);
     position: fixed;
     top: 0;
     left: 0;
@@ -281,8 +286,6 @@
     opacity: 1;
 }
 
-
-
 .filter-main .heading {
     display: flex;
     align-items: center;
@@ -292,78 +295,175 @@
 /* Designing Filter  */
 
 
-.heading-filter,
-.filter {
+.heading-filter{
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    align-items: center;
+    padding: 0;
 }
-
-.heading-filter {
-    margin: 20px 0;
+.filter{
+    display: flex;
+    gap: 10px;
+    /* border: 2px solid red; */
+    flex-basis: 15%;
+    height: 40px;
 }
-
 /* Designing HomePage  */
-.hero-section{
+.hero-section {
     width: 100%;
     height: 60vh;
     /* border: 2px solid red; */
     display: flex;
     justify-content: space-between;
 }
-.heading, .picture{
+
+.heading,
+.picture {
     padding: 40px 30px;
 }
-.heading{
+
+.heading {
     flex-basis: 40%;
 }
-.heading .btns{
-    margin: 5px ;
+
+.heading .btns {
+    margin: 5px;
 }
-.heading h1{
+
+.heading h1 {
     font-size: 70px;
 }
 
-.picture{
+.picture {
     flex-basis: 40%;
     padding: 30px;
 }
-.picture img{
+
+.picture img {
     width: 100%;
     height: 100%;
     overflow: hidden;
     border-radius: 10px;
 }
-.trending{
+
+.trending {
     width: 100%;
     height: 70vh;
-    border: 2px solid red;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    /* border: 2px solid red; */
 }
-.text{
-    padding: 10px;
+
+.text {
     font-size: 45px;
-}
-.text ,.products{
-    flex-basis: 25%;
-    height: 50%;
-    border-radius: 30px;
-}
-.products .name-price{
     width: 100%;
-    height: 20%;
-    background-color: #f6f6f6;
+    height: 15%;
+    /* border: 2px solid black; */
+    text-align: center;
+}
+
+.products {
     display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 85%;
 }
-.products .image{
-    height: 80%;
-}
-.name-price .image img{
+
+.product {
+    flex-grow: 1;
     height: 100%;
 }
+
+.product .pimage {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    overflow: visible;
+    position: relative;
+}
+.pbtn {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    transition: all 0.3 ease-in-out
+}
+
+.pimage:hover .pbtn {
+    visibility: visible;
+    cursor: pointer;
+}
+
+.product .pimage img {
+    width: 100%;
+    height: 100%;
+}
+
+.category {
+    width: 100%;
+    height: 60vh;
+    /* border: 2px solid black; */
+}
+
+.category .heading {
+    width: 100%;
+    height: 15%;
+    /* border: 2px solid red; */
+    text-align: center;
+    padding: 10px;
+}
+
+.category .boxs {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.pbox {
+    position: relative;
+}
+
+.category .pbox {
+    flex-grow: 1;
+    height: 100%;
+    padding: 0;
+
+}
+
+.pbox::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust the opacity by changing the last value (0.5) */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.category .pbox img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.pbox:hover {
+    cursor: pointer;
+}
+
+.category .pbox h1 {
+    position: absolute;
+    top: 40%;
+    right: 120px;
+    z-index: 5;
+    color: white;
+}
+
 /* Designing HomePage  */

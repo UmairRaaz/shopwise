@@ -10,10 +10,13 @@ const imagePaths = [
     require('../products/n2.jpg'),
     require('../products/n3.jpg'),
     require('../products/n4.jpg'),
+    require('../products/t1.jpg'),
+    require('../products/t2.jpg'),
+    require('../products/t3.jpg')
 ];
 const ratings = [];
 
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 13; i++) {
   const rating = Math.floor(Math.random() * 4) + 1; 
   const decimal = Math.floor(Math.random() * 9) + 1;
   const ratingWithDecimal = parseFloat(`${rating}.${decimal}`);
@@ -30,7 +33,10 @@ const productsDetails = [
   { name: "Easygoing Charm", price: 34.99, discPrice: 29.99, gender: "Men", category: "Casualwear" },
   { name: "Effortless Style", price: 25.99, discPrice: 20.99, gender: "Women", category: "Luxury" },
   { name: "Tranquil Luxury", price: 29.99, discPrice: 24.99, gender: "Men", category: "Formalwear" },
-  { name: "Classic Casual", price: 19.99, discPrice: 14.99, gender: "Women", category: "Casualwear" }
+  { name: "Classic Casual", price: 19.99, discPrice: 14.99, gender: "Women", category: "Casualwear" },
+  { name: "Classic Casual", price: 34.99, discPrice: 19.99, gender: "Men", category: "Casualwear" },
+  { name: "Classic Casual", price: 34.99, discPrice: 19.99, gender: "Men", category: "Casualwear" },
+  { name: "Classic Casual", price: 34.99, discPrice: 19.99, gender: "Men", category: "Casualwear" }
 ];
 createServer({
   routes() {

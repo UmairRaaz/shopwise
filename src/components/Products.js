@@ -12,24 +12,19 @@ import CartContext from './CartContext';
 import Filter from './Filter';
 import banner from '../products/banner2.png'
 const Products = () => {
-    const [product, setProduct] = useState([])
+    const { cartItems, setCartItems, wishListItems, setWishListItems, checkedInputs, selectedOption, value, product, setProduct } = useContext(CartContext);
+    // const [product, setProduct] = useState([])
     const [showFilter, setShowFilter] = useState(false);
     const [genderFilter, setGenderFilter] = useState('all');
     const [sortByPrice, setSortByPrice] = useState(false);
     const [sortOption, setSortOption] = useState('mix');
-    const [sortedProducts, setSortedProducts] = useState([...product]);
+    const [sortedProducts, setSortedProducts] =  useState([...product.slice(0, 10)]);
     
     const navigate = useNavigate();
-    useEffect(() => {
-        fetch('/api/products')
-            .then((res) => res.json())
-            .then((data) => setProduct(data.products))
-            .catch(err => console.log(err))
-    }, [])
     const viewProduct = (id) => {
         navigate(`/ViewProduct/${id}`);
     }
-    const { cartItems, setCartItems, wishListItems, setWishListItems, checkedInputs, selectedOption, value } = useContext(CartContext);
+
 
     const addToCart = (data) => {
         const updateCartItems = [...cartItems, data];
@@ -52,7 +47,7 @@ const Products = () => {
     }
 
     const handleSortByOption = (option) => {
-        let sorted = [...product];
+        let sorted = [...product.slice(0, 10)];
 
         if (option === 'lowToHigh') {
             sorted.sort((a, b) => a.price - b.price); // Sort products by price from low to high
@@ -120,7 +115,7 @@ const Products = () => {
             </div>
             <Container>
                 <Row>
-                    {filteredAndSortedProducts.map((data) => {
+                    {filteredAndSortedProducts.slice(0, 10).map((data) => {
                         const isInWishlist = wishListItems.some((item) => item.id === data.id);
                         const isInCart = cartItems.some((item) => item.id === data.id);
                         return (
