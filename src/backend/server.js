@@ -24,19 +24,19 @@ for (let i = 0; i < 13; i++) {
 }
 
 const productsDetails = [
-  { name: "Cozy Classic", price: 29.99, discPrice: 24.99, gender: "Men", category: "Casualwear" },
-  { name: "Relaxed Elegance", price: 19.99, discPrice: 14.99, gender: "Women", category: "Luxury" },
-  { name: "Shirt C", price: 39.99, discPrice: 34.99, gender: "Men", category: "Formalwear" },
-  { name: "Timeless Comfort", price: 27.99, discPrice: 22.99, gender: "Women", category: "Casualwear" },
-  { name: "Soft Serenity", price: 32.99, discPrice: 27.99, gender: "Men", category: "Luxury" },
-  { name: "Gentle Sophistication", price: 21.99, discPrice: 16.99, gender: "Women", category: "Formalwear" },
-  { name: "Easygoing Charm", price: 34.99, discPrice: 29.99, gender: "Men", category: "Casualwear" },
-  { name: "Effortless Style", price: 25.99, discPrice: 20.99, gender: "Women", category: "Luxury" },
-  { name: "Tranquil Luxury", price: 29.99, discPrice: 24.99, gender: "Men", category: "Formalwear" },
-  { name: "Classic Casual", price: 19.99, discPrice: 14.99, gender: "Women", category: "Casualwear" },
-  { name: "Classic Casual", price: 34.99, discPrice: 19.99, gender: "Men", category: "Casualwear" },
-  { name: "Classic Casual", price: 34.99, discPrice: 19.99, gender: "Men", category: "Casualwear" },
-  { name: "Classic Casual", price: 34.99, discPrice: 19.99, gender: "Men", category: "Casualwear" }
+  { name: "Cozy Classic", price: 30, discPrice: 25, gender: "Men", category: "Casualwear" },
+  { name: "Relaxed Elegance", price: 20, discPrice: 15, gender: "Women", category: "Luxury" },
+  { name: "Shirt C", price: 40, discPrice: 35, gender: "Men", category: "Formalwear" },
+  { name: "Timeless Comfort", price: 30, discPrice: 25, gender: "Women", category: "Casualwear" },
+  { name: "Soft Serenity", price: 33, discPrice: 28, gender: "Men", category: "Luxury" },
+  { name: "Gentle Sophistication", price: 22, discPrice: 17, gender: "Women", category: "Formalwear" },
+  { name: "Easygoing Charm", price: 35, discPrice: 30, gender: "Men", category: "Casualwear" },
+  { name: "Effortless Style", price: 25, discPrice: 20, gender: "Women", category: "Luxury" },
+  { name: "Tranquil Luxury", price: 30, discPrice: 25, gender: "Men", category: "Formalwear" },
+  { name: "Classic Casual", price: 20, discPrice: 15, gender: "Women", category: "Casualwear" },
+  { name: "Classic Casual", price: 34, discPrice: 30, gender: "Men", category: "Casualwear" },
+  { name: "Classic Casual", price: 35, discPrice: 30, gender: "Men", category: "Casualwear" },
+  { name: "Classic Casual", price: 35, discPrice: 30, gender: "Men", category: "Casualwear" }
 ];
 createServer({
   routes() {

@@ -3,7 +3,7 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faStar } from '@fortawesome/free-solid-svg-icons';
 import CartContext from './CartContext';
-
+import EmptyWish from './EmptyWish';
 import { useNavigate } from 'react-router-dom';
 const WishList = () => {
     const navigate = useNavigate();
@@ -26,6 +26,9 @@ const WishList = () => {
         const updatedWishlistItems = wishListItems.filter((item) => item.id !== id);
         setWishListItems(updatedWishlistItems);
     };
+    if (wishListItems.length === 0) {
+        return <EmptyWish />;
+      }
     return (
         <Container>
             <Row>

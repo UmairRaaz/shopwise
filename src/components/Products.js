@@ -10,10 +10,9 @@ import { faStar, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import CartContext from './CartContext';
 import Filter from './Filter';
-import banner from '../products/banner2.png'
+import banner from '../products/banner2.jpg'
 const Products = () => {
     const { cartItems, setCartItems, wishListItems, setWishListItems, checkedInputs, selectedOption, value, product, setProduct } = useContext(CartContext);
-    // const [product, setProduct] = useState([])
     const [showFilter, setShowFilter] = useState(false);
     const [genderFilter, setGenderFilter] = useState('all');
     const [sortByPrice, setSortByPrice] = useState(false);
@@ -88,7 +87,7 @@ const Products = () => {
     return (
         <div className='main'>
             <Filter style={showFilter} closeFilter={() => closeFilter()} setGender={handleGenderFilter} />
-            <div className="hero-image w-100 h-80 border border-dark" style={{ height: "35vh" }}>
+            <div className="hero-image w-100">
                 <img src={banner} style={{ width: "100%", height: "100%" }} />
             </div>
             <div className="heading-filter">

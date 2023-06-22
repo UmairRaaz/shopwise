@@ -41,48 +41,50 @@ const ViewProduct = () => {
                     const isInWishlist = wishListItems.some((item) => item.id === data.id);
                     const isInCart = cartItems.some((item) => item.id === data.id);
                     return (
-                        <div key={data.id} className="product">
-                            <div className="image">
-                                <img src={data.img} alt="" />
+                        <div key={data.id} className="product row">
+                            <div className="col-md-4">
+                                <div className="image">
+                                    <img src={data.img} alt="" />
+                                </div>
                             </div>
-                            <div className="details">
-                                <h2>{data.name}</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, doloremque Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, illum.</p>
-                                <div className="ratings">
-                                    {Array.from({ length: 5 }).map((_, index) => (
-                                        <FontAwesomeIcon key={index} icon={faStar} style={{ color: 'yellow', marginRight: "3px" }} />
-                                    ))}
-                                    <span style={{ marginLeft: "5px" }}>({data.rating})</span>
-                                </div>
-                                <div className="d-flex align-items-center mt-2">
-                                    <h4>Price: {data.discPrice}</h4>
-                                    <h6 style={{textDecoration : 'line-through', marginTop: '2px', marginLeft: '10px'}}>{data.price}</h6>
-                                </div>
-                                <div className="aboutProduct">
-                                    <h6>About Product</h6>
-                                    <span>Category : {data.category}</span> <br />
-                                    <span>Gender : {data.gender}</span>
-                                </div>
-                                <div className="d-flex gap-3 mt-3">
-                                    {isInCart ? (
-                                        <Button variant='secondary' onClick={() => goToBag(data.id)}>Go to Bag</Button>
-                                    ) : (
-                                        <Button variant="primary" onClick={() => addToCart(data)}>Add to Cart</Button>
-                                    )}
-
-                                    {isInWishlist ? (
-                                        <Button variant='primary' onClick={() => removeFromWish(data.id)}><FontAwesomeIcon icon={faHeart} /></Button>
-                                    ) : (
-                                        <Button variant='secondary' onClick={() => addToWish(data)}><FontAwesomeIcon icon={faHeart} /></Button>
-                                    )}
+                            <div className="col-md-8">
+                                <div className="details">
+                                    <h2>{data.name}</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, doloremque Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, illum.</p>
+                                    <div className="ratings">
+                                        {Array.from({ length: 5 }).map((_, index) => (
+                                            <FontAwesomeIcon key={index} icon={faStar} style={{ color: 'yellow', marginRight: "3px" }} />
+                                        ))}
+                                        <span style={{ marginLeft: "5px" }}>({data.rating})</span>
+                                    </div>
+                                    <div className="d-flex align-items-center mt-2">
+                                        <h4>Price: {data.discPrice}</h4>
+                                        <h6 style={{ textDecoration: 'line-through', marginTop: '2px', marginLeft: '10px' }}>{data.price}</h6>
+                                    </div>
+                                    <div className="aboutProduct">
+                                        <h6>About Product</h6>
+                                        <span>Category : {data.category}</span> <br />
+                                        <span>Gender : {data.gender}</span>
+                                    </div>
+                                    <div className="d-flex gap-3 mt-3">
+                                        {isInCart ? (
+                                            <Button variant='secondary' onClick={() => goToBag(data.id)}>Go to Bag</Button>
+                                        ) : (
+                                            <Button variant="primary" onClick={() => addToCart(data)}>Add to Cart</Button>
+                                        )}
+                                        {isInWishlist ? (
+                                            <Button variant='primary' onClick={() => removeFromWish(data.id)}><FontAwesomeIcon icon={faHeart} /></Button>
+                                        ) : (
+                                            <Button variant='secondary' onClick={() => addToWish(data)}><FontAwesomeIcon icon={faHeart} /></Button>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     );
                 })}
-
-
             </div>
+
 
 
         </div>

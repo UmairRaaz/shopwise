@@ -1,30 +1,50 @@
+/* Empty Cart CSS */
+.empty{
+    width: 100%;
+    height: 91vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.emptycontent{
+    width: 500px;
+    min-height: 500px;
+    text-align: center;
+}
+.emptycontent .image{
+    width: 100%;
+    height: 300px;
+}
+.emptycontent .image img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Empty Cart CSS */
 /* Designing ViewProduct Page  */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 .box {
     width: 100%;
     height: 90vh;
     padding: 80px 80px;
     background-color: #f8f9fa;
 }
-
-.product {
+.main-content{
+    padding-top: 50px;
+}.product {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.image,
-.details {
-    flex-basis: 45%;
-    height: 100%;
-    border-radius: 10px;
-    overflow: hidden;
+.product .image,
+.product .details {
+    width: 100%;
 }
 
 .image img {
@@ -37,21 +57,43 @@
     background-color: white;
 }
 
+.navbar{
+    padding: 10px;
+}
+
+.nav-cont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-icon {
+    display: flex;
+    gap: 10px;
+}
+
+.navicons {
+    margin-top: 5px;
+    /* border: 2px solid black; */
+}
+
 .cart {
-    width: 80px;
+    width: 50px;
     position: relative;
 }
 
 .cartIcon {
     font-size: 25px;
-
 }
 
 .numItems {
     position: absolute;
-    top: -15px;
-    right: 32px;
-    font-size: 20px;
+    top: -8px;
+    right: -1px;
+    font-size: 15px;
+    background-color: #d63031;
+    padding: 1px 5px;
+    border-radius: 50%;
+    color: white;
 }
 
 /* Designing ViewProduct Page  */
@@ -64,6 +106,7 @@
     background-color: #fbfaf7;
     padding: 20px 120px;
 }
+
 
 .bag-price {
     display: flex;
@@ -185,12 +228,9 @@
     flex-basis: 45%;
     height: auto;
     background-color: #fefefd;
-}
-
-.colom1,
-.colom2 {
     padding: 30px;
 }
+
 
 .colom1 h3 {
     margin-left: 20px;
@@ -205,15 +245,14 @@
     margin: 0 5px;
 }
 
-.colom2 .products {
-    margin-top: 20px;
+.colom2 .ch-products {
+    margin-top: 10px;
     width: 100%;
-    min-height: 100px;
     display: flex;
     flex-direction: column;
 }
 
-.colom2 .products .product {
+.colom2 .ch-products .product {
     width: 100%;
     height: 80px;
     display: flex;
@@ -223,25 +262,25 @@
     padding: 5px;
 }
 
-.colom2 .products .product .name-price {
+.colom2 .ch-products .product .name-price {
     padding: 10px;
     flex-basis: 50%;
     height: 100%;
 }
 
-.colom2 .products .product .name-price .prices {
+.colom2 .ch-products .product .name-price .prices {
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-.colom2 .products .product .img {
+.colom2 .ch-products .product .img {
     flex-basis: 20%;
     height: 100%;
     border-radius: 5px;
 }
 
-.colom2 .products .product .img img {
+.colom2 .ch-products .product .img img {
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -268,7 +307,6 @@
     height: 100vh;
     width: 25%;
     padding: 20px;
-    /* background-color: hsla(0,0%,100%,.3); */
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     background: hsla(0, 0%, 100%, .3);
@@ -295,27 +333,32 @@
 /* Designing Filter  */
 
 
-.heading-filter{
+.heading-filter {
     display: flex;
     justify-content: space-between;
     gap: 10px;
     align-items: center;
     padding: 0;
 }
-.filter{
+
+.filter {
     display: flex;
     gap: 10px;
     /* border: 2px solid red; */
     flex-basis: 15%;
     height: 40px;
 }
+
 /* Designing HomePage  */
 .hero-section {
     width: 100%;
     height: 60vh;
-    /* border: 2px solid red; */
     display: flex;
     justify-content: space-between;
+}
+
+.hero-image {
+    height: 40vh;
 }
 
 .heading,
@@ -350,14 +393,12 @@
 .trending {
     width: 100%;
     height: 70vh;
-    /* border: 2px solid red; */
 }
 
 .text {
     font-size: 45px;
     width: 100%;
     height: 15%;
-    /* border: 2px solid black; */
     text-align: center;
 }
 
@@ -380,6 +421,7 @@
     overflow: visible;
     position: relative;
 }
+
 .pbtn {
     position: absolute;
     top: 80%;
@@ -402,13 +444,11 @@
 .category {
     width: 100%;
     height: 60vh;
-    /* border: 2px solid black; */
 }
 
 .category .heading {
     width: 100%;
     height: 15%;
-    /* border: 2px solid red; */
     text-align: center;
     padding: 10px;
 }
@@ -419,6 +459,11 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
+
+}
+
+.pbtn {
+    visibility: hidden;
 }
 
 .pbox {
@@ -440,7 +485,6 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Adjust the opacity by changing the last value (0.5) */
     border-radius: 10px;
     overflow: hidden;
 }
@@ -467,3 +511,163 @@
 }
 
 /* Designing HomePage  */
+
+/* Applying Media Screen  */
+@media screen and (max-width: 640px) {
+    .main {
+        padding: 10px 10px;
+    }
+
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .heading {
+        text-align: left;
+    }
+
+    .picture {
+        display: none;
+    }
+
+    .products {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        margin-bottom: 20px;
+    }
+
+    .trending {
+        margin-bottom: 1020px;
+        /* Adjust the margin as needed */
+    }
+
+    .category {
+        height: auto;
+    }
+
+    .category .heading {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .category .boxs {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    .category .pbox {
+        flex-grow: 1;
+        height: auto;
+        padding: 0;
+    }
+
+    .category .pbox::before {
+        border-radius: 0;
+    }
+
+    .category .pbox h1 {
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+    .pbtn{
+        visibility: visible;
+    }
+
+    .hero-image {
+        height: 150px;
+    }
+
+    .box {
+        padding: 10px;
+        padding-left: 30px;
+    }
+
+    .bag-price {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bagItems-column,
+    .totalBill-column {
+        width: 100%;
+    }
+
+    .bagItems {
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        height: 150px;
+    }
+
+    .bagItems .cart-image img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+    }
+
+    .btn-addCart {
+        padding: 5px 10px;
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .bagItems .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+
+    .bagItems .name-qty {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .bagItems h5 {
+        margin: 0;
+    }
+
+    .bagItems .qty p {
+        margin: 5px 0;
+    }
+
+    .bagItems .price {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .bagItems .price h5,
+    .bagItems .price p {
+        margin: 0;
+    }
+
+    .bagItems .btns {
+        display: flex;
+        gap: 5px;
+        margin-top: 10px;
+    }
+
+    .checkout-box {
+        flex-direction: column;
+    }
+
+    .colom1,
+    .colom2 {
+        width: 100%;
+    }
+
+}
+
+/* Applying Media Screen  */

@@ -9,21 +9,25 @@ import c2 from '../products/c2.jpg';
 import c3 from '../products/c3.jpg';
 import { useNavigate } from 'react-router-dom';
 const Home = () => {
-  const {product} = useContext(CartContext);
+  const { product } = useContext(CartContext);
   const navigate = useNavigate();
   const viewProduct = (id) => {
     navigate(`/ViewProduct/${id}`);
-}
+  }
+  const scrollToDiv = () => {
+    const targetDiv = document.querySelector('.category');
+    targetDiv.scrollIntoView({ behavior: 'smooth' });
+  }
   return (
     <div className='main'>
       <div className="hero-section">
-        <div className="heading">
-          <h1>Discover  <br /> Your Style</h1>
-          <p> Experience the finest quality and craftsmanship with our wide selection of premium shirt fabrics. .</p>
-          <Button className='btns' variant="dark">Start Shopping</Button>
-          <Button className='btns' variant="outline-dark">Explore More <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></Button>
+        <div class="heading">
+          <h1>Discover <br /> Your Style</h1>
+          <p>Experience the finest quality and craftsmanship with our wide selection of premium shirt fabrics.</p>
+          <button onClick={()=> navigate('/Products')} class="btn btn-dark btns">Start Shopping</button>
+          <button onClick={scrollToDiv} class="btn btn-outline-dark btns">Explore More <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></button>
         </div>
-        <div className="picture">
+        <div class="picture">
           <img src={homeImage} alt="" />
         </div>
       </div>
@@ -35,7 +39,7 @@ const Home = () => {
           {product.slice(10, 13).map((data) => {
             return (
               <div className="product">
-                <div className="pimage"  onClick={() => viewProduct(data.id)}>
+                <div className="pimage" onClick={() => viewProduct(data.id)}>
                   <img src={data.img} alt="" />
                   <button className="pbtn btn btn-info">View Product</button>
                 </div>
@@ -49,15 +53,15 @@ const Home = () => {
           <h2>Categories</h2>
         </div>
         <div className="boxs">
-          <div className="pbox" onClick={()=>(navigate('/products'))}>
+          <div className="pbox" onClick={() => (navigate('/products'))}>
             <img src={c1} alt="" />
             <h1>Bags</h1>
           </div>
-          <div className="pbox" onClick={()=>(navigate('/products'))}>
+          <div className="pbox" onClick={() => (navigate('/products'))}>
             <img src={c2} alt="" />
             <h1>Shoes</h1>
           </div>
-          <div className="pbox" onClick={()=>(navigate('/products'))}>
+          <div className="pbox" onClick={() => (navigate('/products'))}>
             <img src={c3} alt="" />
             <h1>Glasses </h1>
           </div>

@@ -4,35 +4,42 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faHeart } from '@fortawesome/free-solid-svg-icons';
-import { Link} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import CartContext from './CartContext';
-
+import Button from 'react-bootstrap/Button';
 const NavbarComponent = () => {
-    const {cartItems, wishListItems} = useContext(CartContext)
+    const { cartItems, wishListItems } = useContext(CartContext);
+    let navigate = useNavigate()
     return (
         <div>
-                <Navbar bg="light" expand="lg">
-                    <Container>
-                        <Navbar.Brand as={Link} to="/home">React-Bootstrap</Navbar.Brand>
-                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                        <Navbar.Collapse id="basic-navbar-nav">
-                            <Nav className="me-auto">
-                                <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                                <Nav.Link as={Link} to="/Products">Products</Nav.Link>
-                            <div className="cart">
-                            <Nav.Link as={Link} to="/CartPage"><FontAwesomeIcon icon={faCartShopping} className='cartIcon' /></Nav.Link>
-                            <p className='numItems'>{cartItems.length}</p>
+            <Navbar bg="light" expand="lg" className="navbar fixed-top">
+                <Container fluid>
+                    <Navbar.Brand as={Link} to="/home">ShopWise</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+                        <Nav>
+                            <div className="cart" style={{marginTop : '10px'}}>
+                                <Nav.Link as={Link} to="/CartPage">
+                                    <FontAwesomeIcon icon={faCartShopping} className='cartIcon' />
+                                </Nav.Link>
+                                {cartItems.length !== 0 && <p className='numItems'>{cartItems.length}</p>}
                             </div>
-                            <div className="cart">
-                            <Nav.Link as={Link} to="/WishList"><FontAwesomeIcon icon={faHeart} className='cartIcon' /></Nav.Link>
-                            <p className='numItems'>{wishListItems.length}</p>
+                            <div className="cart" style={{ marginRight: '30px', marginTop: '10px' }}>
+                                <Nav.Link as={Link} to="/WishList">
+                                    <FontAwesomeIcon icon={faHeart} className='cartIcon' />
+                                </Nav.Link>
+                                {wishListItems.length !== 0 && <p className='numItems'>{wishListItems.length}</p>}
+                                
                             </div>
-       
-                            </Nav>
-                        </Navbar.Collapse>
-                    </Container>
-                </Navbar>
-  
+                            <Button variant="success" size="sm" style={{height: "30px",  marginTop: '10px'}} onClick={() => navigate('/Products')}>
+                                Explore
+                            </Button>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+
+
         </div>
     )
 }

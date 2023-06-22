@@ -6,6 +6,8 @@ import Row from 'react-bootstrap/Row';
 import InputGroup from 'react-bootstrap/InputGroup';
 import CartContext from './CartContext';
 import Modal from 'react-bootstrap/Modal';
+import { useNavigate } from 'react-router';
+ 
 const Checkout = () => {
     const [form, setform] = useState({});
     const [addresses, setAddresses] = useState([]);
@@ -15,7 +17,7 @@ const Checkout = () => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
+    let navigate = useNavigate()
     const fillDummy = () => {
         setform({
             name: 'Jane Smith',
@@ -101,7 +103,7 @@ const Checkout = () => {
                                     </Row>
 
                                     <Form.Group className="mb-3" id="formGridCheckbox">
-                                        <Button onClick={fillDummy} className='btns' variant="outline-dark" type="button">Fill Dummy Text</Button>
+                                        <Button onClick={fillDummy} className='btns mb-1' variant="outline-dark" type="button">Fill Dummy Text</Button>
                                         <Button onClick={() => setToggleForm(!toggleForm)} className='btns' variant="outline-dark" type="button">Cancel</Button>
                                         <Button onClick={saveForm} className='btns' variant="dark" type="submit">Save</Button>
                                     </Form.Group>
@@ -140,10 +142,10 @@ const Checkout = () => {
                     </div>
                 </div>
                 <div className="colom2">
-                    <div className="heading">
+                    <div className="ch-heading">
                         <h3>Order Summary</h3>
                     </div>
-                    <div className="products">
+                    <div className="ch-products">
                         {cartItems.map((data) => {
                             const quantity = totalitem[data.id] || 1;
                             return (
@@ -216,7 +218,7 @@ const Checkout = () => {
                                 </div>
                             </Modal.Body>
                             <Modal.Footer>
-                                <Button variant="dark" onClick={handleClose}>
+                                <Button variant="dark" onClick={()=> navigate('/Thankyou')} >
                                     Comfirm Order
                                 </Button>
                             </Modal.Footer>
