@@ -11,7 +11,7 @@ import Filter from './Filter';
 import Thankyou from './Thankyou';
 import EmptyCartItem from './EmptyCartItem';
 import EmptyWish from './EmptyWish';
-
+import Footer from './Footer';
 const MainApp = () => {
   return (
     <>
@@ -32,6 +32,7 @@ const MainApp = () => {
             <Route path='/EmptyCartItem' element={<EmptyCartItem />} />
           </Routes>
         </div>
+        <Footer />
       </Router>
     </>
   )

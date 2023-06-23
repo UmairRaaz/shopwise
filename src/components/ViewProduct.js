@@ -84,9 +84,6 @@ const ViewProduct = () => {
                     );
                 })}
             </div>
-
-
-
         </div>
     )
 }

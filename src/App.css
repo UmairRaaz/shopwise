@@ -1,21 +1,24 @@
 /* Empty Cart CSS */
-.empty{
+.empty {
     width: 100%;
     height: 91vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.emptycontent{
+
+.emptycontent {
     width: 500px;
     min-height: 500px;
     text-align: center;
 }
-.emptycontent .image{
+
+.emptycontent .image {
     width: 100%;
     height: 300px;
 }
-.emptycontent .image img{
+
+.emptycontent .image img {
     width: 100%;
     height: 100%;
 }
@@ -27,15 +30,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .box {
     width: 100%;
     height: 90vh;
     padding: 80px 80px;
     background-color: #f8f9fa;
 }
-.main-content{
+
+.main-content {
     padding-top: 50px;
-}.product {
+}
+
+.product {
     width: 100%;
     height: 100%;
     display: flex;
@@ -57,7 +64,7 @@
     background-color: white;
 }
 
-.navbar{
+.navbar {
     padding: 10px;
 }
 
@@ -315,16 +322,18 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 5;
-    opacity: 0;
+    right: 0;
+    z-index: 20;
+    display: none;
     transition: all 0.3s ease-in-out;
+    overflow: auto;
 }
 
 .filter-main.show {
-    opacity: 1;
+    display: block;
 }
 
-.filter-main .heading {
+.filter-main .fheading {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -512,6 +521,31 @@
 
 /* Designing HomePage  */
 
+/* Designing Footer  */
+.footer {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    background-color: #f8f9fa;
+    color: #2d3436;
+}
+
+.footer p {
+    /* border: 1px solid black; */
+    margin-right: 5px;
+    font-weight: bolder;
+}
+
+.footer a {
+    text-decoration: none;
+    padding-left: 10px;
+    color: #2d3436;
+}
+
+/* Designing Footer  */
+
 /* Applying Media Screen  */
 @media screen and (max-width: 640px) {
     .main {
@@ -577,7 +611,8 @@
         right: 50%;
         transform: translate(50%, -50%);
     }
-    .pbtn{
+
+    .pbtn {
         visibility: visible;
     }
 
@@ -666,6 +701,10 @@
     .colom1,
     .colom2 {
         width: 100%;
+    }
+
+    .filter-main {
+        width: 70%;
     }
 
 }

@@ -23,14 +23,12 @@ const Filter = (props) => {
         <div className={`filter-main ${props.style ? 'show' : ''}`}
             style={{
                 opacity: props.style ? '1' : '0',
-                width: props.style ? '25%' : '0',
                 transition: 'opacity 0.3s ease-in-out, width 0.1s linear'
             }}>
-            <div className="heading">
+            <div className="fheading">
                 <h3>Filter Products</h3>
                 <FontAwesomeIcon icon={faX} onClick={() => props.closeFilter(false)} style={{ cursor: 'pointer' }} />
             </div>
-            <Button variant="outline-dark">Clear</Button>{' '}
             <div className="gender">
                 <h4>Gender</h4>
                 <Button variant="outline-dark" onClick={() => props.setGender("Men")}>Male</Button>{' '}

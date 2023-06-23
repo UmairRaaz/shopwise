@@ -77,7 +77,7 @@ const CartPage = () => {
                         <p>
                           Quantity:
                           <FontAwesomeIcon onClick={() => addItem(data.id)} icon={faPlus} className='qty-btn' />
-                          <input type="text" value={totalitem[data.id] || 1} className='qty-input' readOnly />
+                          <input style={{textAlign: 'center'}} type="text" value={totalitem[data.id] || 1} className='qty-input' readOnly />
                           <FontAwesomeIcon onClick={() => minusItem(data.id)} className='qty-btn' icon={faMinus} />
                         </p>
                       </div>
