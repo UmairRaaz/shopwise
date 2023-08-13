@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import homeImage from '../products/home.jpg';

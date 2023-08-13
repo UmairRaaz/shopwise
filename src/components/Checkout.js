@@ -47,7 +47,7 @@ const Checkout = () => {
         setSelectedValue(getFormattedAddress(addresses[index]))
     };
 
-    const { cartItems, setCartItems, totalitem, setItem } = useContext(CartContext);
+    const { cartItems, totalitem } = useContext(CartContext);
     let totalQuantity = 0;
     let totalPrice = 0;
     let totalDiscountedPrice = 0;
@@ -112,7 +112,7 @@ const Checkout = () => {
                         )}
                     </div>
                     <div className="addresses " >
-                        <InputGroup style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', marginTop: '10px' }}>
+                        <InputGroup style={{  display: 'flex', flexDirection: 'column', marginTop: '10px' }}>
                             <div key={-1} style={{ display: 'flex', alignItems: 'center', }}>
                                 <InputGroup.Radio
                                     aria-label="Radio button for following text input"

@@ -12,7 +12,7 @@ import CartContext from './CartContext';
 import Filter from './Filter';
 import banner from '../products/banner2.jpg'
 const Products = () => {
-    const { cartItems, setCartItems, wishListItems, setWishListItems, checkedInputs, selectedOption, value, product, setProduct } = useContext(CartContext);
+    const { cartItems, setCartItems, wishListItems, setWishListItems, checkedInputs, selectedOption, value, product } = useContext(CartContext);
     const [showFilter, setShowFilter] = useState(false);
     const [genderFilter, setGenderFilter] = useState('all');
     const [sortByPrice, setSortByPrice] = useState(false);
@@ -87,7 +87,7 @@ const Products = () => {
     return (
         <div className='main'>
             <Filter style={showFilter} closeFilter={() => closeFilter()} setGender={handleGenderFilter} />
-            <div className="hero-image w-100">
+            <div className="hero-image w-100" alt="heroImage">
                 <img src={banner} style={{ width: "100%", height: "100%" }} />
             </div>
             <div className="heading-filter">
