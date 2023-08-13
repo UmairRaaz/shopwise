@@ -16,7 +16,7 @@ const NavbarComponent = () => {
                 boxShadow: "0 4px 30px rgba(0, 0, 0, .1)", zIndex: '10'
             }}>
                 <Container fluid>
-                    <Navbar.Brand as={Link} to="/home">ShopWise</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/shopwiseapp">ShopWise</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                         <Nav>

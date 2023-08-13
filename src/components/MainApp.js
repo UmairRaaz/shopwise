@@ -21,7 +21,7 @@ const MainApp = () => {
           <Routes>
             <Route path='/Products' element={<Products />} />
             <Route path='/ViewProduct/:id' element={<ViewProduct />} />
-            <Route path='/' element={<Home />} />
+            <Route path='/shopwiseapp' element={<Home />} />
             <Route path='/Home' element={<Home />} />
             <Route path='/CartPage' element={<CartPage />} />
             <Route path='/WishList' element={<WishList />} />
