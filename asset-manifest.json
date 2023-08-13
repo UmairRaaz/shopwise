@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/shopwise/static/css/main.fed938f9.css",
+    "main.js": "/shopwise/static/js/main.1af8f557.js",
+    "static/js/787.2d9e79d2.chunk.js": "/shopwise/static/js/787.2d9e79d2.chunk.js",
+    "static/media/home.jpg": "/shopwise/static/media/home.24ba05dfb48cb9094c3d.jpg",
+    "static/media/emptycart.jpg": "/shopwise/static/media/emptycart.9fff9fe185b16fa9c06c.jpg",
+    "static/media/banner2.jpg": "/shopwise/static/media/banner2.cd0214c30615a68b3796.jpg",
+    "static/media/f3.jpg": "/shopwise/static/media/f3.eb20eb6eb91ed19c750f.jpg",
+    "static/media/f2.jpg": "/shopwise/static/media/f2.3e6855c5a1ae0017d816.jpg",
+    "static/media/emptywish.jpg": "/shopwise/static/media/emptywish.6ad779927917d6a2121b.jpg",
+    "static/media/f6.jpg": "/shopwise/static/media/f6.1432940ea16a00e9e206.jpg",
+    "static/media/f5.jpg": "/shopwise/static/media/f5.9cf8c3ab6bcc5c041641.jpg",
+    "static/media/n2.jpg": "/shopwise/static/media/n2.d90494fa65005021b5af.jpg",
+    "static/media/f1.jpg": "/shopwise/static/media/f1.ee114738f4fe69e0c589.jpg",
+    "static/media/f4.jpg": "/shopwise/static/media/f4.dd5e19a9210a840660b4.jpg",
+    "static/media/t3.jpg": "/shopwise/static/media/t3.b21f79a3e3f5256f130d.jpg",
+    "static/media/t1.jpg": "/shopwise/static/media/t1.f2b4f9f5be87956280ac.jpg",
+    "static/media/t2.jpg": "/shopwise/static/media/t2.76c5053812de8d3e785c.jpg",
+    "static/media/n4.jpg": "/shopwise/static/media/n4.ad076decd2c490767927.jpg",
+    "static/media/c3.jpg": "/shopwise/static/media/c3.20f7069d8083449e3d4a.jpg",
+    "static/media/c2.jpg": "/shopwise/static/media/c2.b2814fe7e01a573add00.jpg",
+    "static/media/c1.jpg": "/shopwise/static/media/c1.516852e691156c04f365.jpg",
+    "static/media/n3.jpg": "/shopwise/static/media/n3.184ff86db413842df535.jpg",
+    "static/media/n1.jpg": "/shopwise/static/media/n1.d0fc999e5c31100e7a56.jpg",
+    "index.html": "/shopwise/index.html",
+    "main.fed938f9.css.map": "/shopwise/static/css/main.fed938f9.css.map",
+    "main.1af8f557.js.map": "/shopwise/static/js/main.1af8f557.js.map",
+    "787.2d9e79d2.chunk.js.map": "/shopwise/static/js/787.2d9e79d2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fed938f9.css",
+    "static/js/main.1af8f557.js"
+  ]
+}
